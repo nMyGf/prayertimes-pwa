@@ -294,7 +294,7 @@ export function usePrayerCalculations() {
 
       if (methodId === "auto") {
         const countryCode = geocodeResult?.address_components?.find((c: any) => c.types.includes("country"))?.short_name
-        methodToUse = countryMethods[countryCode as keyof typeof countryMethods] || countryMethods["default"]
+        methodToUse = String(countryMethods[countryCode as keyof typeof countryMethods] || countryMethods["default"])
         // For auto mode, we'll get the method name from API response later
       } else {
         methodToUse = methodId
