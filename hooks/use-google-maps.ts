@@ -22,7 +22,7 @@ export function useGoogleMaps() {
       return
     }
 
-    if (apiKey === "your_api_key" || apiKey === "YOUR_API_KEY" || apiKey.length < 10) {
+    if (!apiKey || apiKey.length < 10) {
       setError(
         "Please replace the placeholder API key with your actual Google Maps API key in your environment variables.",
       )
