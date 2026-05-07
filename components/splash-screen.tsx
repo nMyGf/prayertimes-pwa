@@ -11,7 +11,7 @@ interface SplashScreenProps {
 
 export function SplashScreen({ onComplete, selectedLang }: SplashScreenProps) {
   const [isVisible, setIsVisible] = useState(true)
-  const { t } = useTranslation(selectedLang)
+  const { t } = useTranslation(selectedLang as "tr" | "en" | "ar" )
 
   useEffect(() => {
     const timer = setTimeout(() => {
