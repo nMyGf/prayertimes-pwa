@@ -284,8 +284,8 @@ export function SettingsPanel({ useAgreedTime, onModeChange, selectedLang }: Set
   useEffect(() => {
     const handleLanguageChange = () => {
       const panels = document.querySelectorAll(".settings-panel")
-      panels.forEach((panel) => {
-        if (panel && panel.style.display !== "none") {
+      panels.forEach((panel : any) => {
+        if (panel && panel.styles.display !== "none") {
           panel.classList.add("language-updating")
           setTimeout(() => {
             panel.classList.remove("language-updating")
