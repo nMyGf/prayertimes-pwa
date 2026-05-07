@@ -54,7 +54,7 @@ export function PrayerTimesPopup({ data, selectedLang, onShowSettings, onShowInf
           <b>🕒 {t.localTime}:</b> <span className="text-blue-600">{currentTime}</span>
         </p>
         <p>
-          <b>📍 {t.Location}:</b> <span className="text-blue-600">{data.locationName}</span>
+          <b>📍 location:</b> <span className="text-blue-600">{data.locationName}</span>
         </p>
       </div>
 
@@ -83,7 +83,7 @@ export function PrayerTimesPopup({ data, selectedLang, onShowSettings, onShowInf
 
       <div className="mt-2 space-y-1">
         <button onClick={onShowInfo} className="w-full bg-black text-white px-2 py-1 rounded text-xs cursor-pointer">
-          <b>{t.infoButton}</b>
+          <b> info </b>
         </button>
         <button
           onClick={onShowSettings}
