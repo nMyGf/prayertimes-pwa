@@ -543,10 +543,9 @@ export function usePrayerCalculations() {
       const nextPrayerElement = document.querySelector(`[data-prayer="${remaining.prayer}"]`)
       if (nextPrayerElement) {
         const countdownText =
-          selectedLang === "ar"
-            ? `<span class="next-prayer">${t.nextPrayer}: ${t.remaining} ${remaining.seconds} ${t.seconds} ${remaining.minutes} ${t.minutes} ${remaining.hours} ${t.hours}</span>`
-            : `<span class="next-prayer">${t.nextPrayer}: ${remaining.hours} ${t.hours} ${remaining.minutes} ${t.minutes} ${remaining.seconds} ${t.seconds} ${t.remaining}</span>`
-
+  selectedLang === "ar"
+    ? `<span class="next-prayer">الصلاة القادمة: متبقي ${remaining.hours} ساعة ${remaining.minutes} دقيقة ${remaining.seconds} ثانية</span>`
+    : `<span class="next-prayer">Next Prayer: ${remaining.hours} hours ${remaining.minutes} minutes ${remaining.seconds} seconds remaining</span>`
         nextPrayerElement.innerHTML = countdownText
         if (nextPrayerElement.parentElement) {
           nextPrayerElement.parentElement.classList.add("next-prayer")
