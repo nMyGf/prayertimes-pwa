@@ -1,6 +1,6 @@
 {
-  "name": "Accurate Prayer Times",
-  "short_name": "Prayer Times",
+  "name": "APT",
+  "short_name": "APT",
   "description": "Precise Islamic Prayer Schedule with 3D Earth View",
   "start_url": "/",
   "display": "standalone",
